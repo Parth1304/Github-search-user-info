@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body.light {
+  background-color: #F6F8FF;
+  color: #2B3442;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.dark {
+  background-color: #141D2F;
+  color: #FFFFFF;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 36px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle span {
+  margin-left: 16px;
+  font-size: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1E2A47;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 24px;
+}
+
+.light .search-bar {
+  background-color: #FEFEFE;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.search-icon {
+  margin: 0 24px 0 32px;
+  font-size: 24px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+}
+
+.search-bar input::placeholder {
+  color: #4B6A9B;
+}
+
+.search-bar button {
+  padding: 12px 24px;
+  background-color: #0079FF;
   color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar button:hover {
+  background-color: #60ABFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: #F74646;
+}
+
+.profile-card {
+  background-color: #1E2A47;
+  border-radius: 15px;
+  padding: 48px;
+  display: flex;
+  margin-top: 24px;
+}
+
+.light .profile-card {
+  background-color: #FEFEFE;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.avatar {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  margin-right: 37px;
+}
+
+.info-container {
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.join-date {
+  color: #4B6A9B;
+  margin: 0;
+}
+
+.username {
+  color: #0079FF;
+  margin: 0 0 20px 0;
+}
+
+.bio {
+  color: #4B6A9B;
+  margin: 0 0 32px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #141D2F;
+  padding: 15px 32px;
+  border-radius: 10px;
+  margin-bottom: 37px;
+}
+
+.light .stats {
+  background-color: #F6F8FF;
+}
+
+.stat-label {
+  color: #4B6A9B;
+  margin: 0;
+  font-size: 13px;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px 65px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  color: #4B6A9B;
+}
+
+.icon {
+  margin-right: 16px;
+  font-size: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
