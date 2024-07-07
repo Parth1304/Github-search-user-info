@@ -41,7 +41,6 @@ function App() {
         <h1>devfinder</h1>
         <button onClick={toggleTheme} className="theme-toggle">
           {theme === 'light' ? 'DARK' : 'LIGHT'}
-          <span>{theme === 'light' ? '🌙' : '☀️'}</span>
         </button>
       </header>
 
@@ -94,7 +93,7 @@ function App() {
                 )}
               </div>
               <div className="footer-item">
-                <span className="icon">🐦</span>
+                <span className="icon">𝕏 </span>
                 {userData.twitter_username || 'Not Available'}
               </div>
               <div className="footer-item">
